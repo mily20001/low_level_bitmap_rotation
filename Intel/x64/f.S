@@ -62,17 +62,17 @@ section .text
 
 
 global f
-f:	
-	push rbp
-	mov rbp,rsp
-	sub esp, 8
+f:
+    push rbp
+    mov rbp,rsp
+    sub esp, 8
 
-	mov r9, rcx
-	mov r10, rdx
+    mov r9, rcx
+    mov r10, rdx
 
-	mov pos, dword 0
-	mov dst_x, word 0
-	mov dst_y, word 0
+    mov pos, dword 0
+    mov dst_x, word 0
+    mov dst_y, word 0
 
     cmp rotation, qword 0
     je set_width_rot02
@@ -203,6 +203,6 @@ not_dst_line_end:
     jmp loop
 
 end:
-	mov rsp,rbp
-	pop rbp
-	ret
+    mov rsp,rbp
+    pop rbp
+    ret

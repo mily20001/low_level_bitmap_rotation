@@ -62,18 +62,18 @@ section .text
 
 
 global f
-f:	
-	push ebp
-	mov ebp,esp
-	sub esp, 24
+f:
+    push ebp
+    mov ebp,esp
+    sub esp, 24
 
     xor eax, eax
     mov [size], eax
-	mov [pos], eax
-	mov [dst_pos], eax
-	mov [dst_x], eax
-	mov [dst_y], eax
-	mov [dst_width], eax
+    mov [pos], eax
+    mov [dst_pos], eax
+    mov [dst_x], eax
+    mov [dst_y], eax
+    mov [dst_width], eax
 
     cmp [rotation], dword 0
     je set_width_rot02
@@ -204,6 +204,6 @@ not_dst_line_end:
     jmp loop
 
 end:
-	mov esp,ebp
-	pop ebp
-	ret
+    mov esp,ebp
+    pop ebp
+    ret
